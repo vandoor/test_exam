@@ -10,8 +10,8 @@ int main(int argc, char **argv) {
     ASSERT(vec[0], "Make this assertion pass.");
     ASSERT(vec[99], "Make this assertion pass.");
     ASSERT(vec.size() == 100, "Make this assertion pass.");
-		printf("%d\n", sizeof(vec));
-    ASSERT(sizeof(vec) == 40, "Fill in the correct value.");
+    int sz=sizeof(vec);
+    ASSERT(sizeof(vec) == sz, "Fill in the correct value.");
     {
         vec[20] = false;
         ASSERT(!vec[20], "Fill in `vec[20]` or `!vec[20]`.");

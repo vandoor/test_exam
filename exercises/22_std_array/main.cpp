@@ -12,7 +12,7 @@ int main(int argc, char **argv) {
 				printf("sizeof =%d\n", sizeof(arr));
         ASSERT(sizeof(arr) == 20, "Fill in the correct value.");
         int ans[]{1, 2, 3, 4, 5};
-        ASSERT(std::memcmp(arr.begin(), ans, sizeof(int)*5) == 0, "Fill in the correct values.");
+        ASSERT(std::memcmp(&arr[0], ans, sizeof(int)*5) == 0, "Fill in the correct values.");
     }
     {
         std::array<double, 8> arr;
